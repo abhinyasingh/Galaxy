@@ -1,0 +1,439 @@
+.body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Stars.jpeg);
+    background-color:black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.h1{
+    padding: 10em;
+    display: flex;
+    color: white;
+    margin-bottom: 20em;
+    text-shadow: 2px 2px 2px red;
+}
+
+.container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+/*Creation of the planet axis*/
+
+.sun {
+    position: absolute;
+    top: 16em;
+    left: 14em;
+    width: 10em;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5em white;
+    color: azure;
+}
+
+.sun p{
+    align-items: center;
+    justify-content: center;
+}
+
+.earth,
+.moon {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 60%;
+    color: white;
+}
+
+.mercury {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 55%;
+    color: white;
+}
+
+.venus{
+    position: absolute;
+    border-style: solid;
+    border-color:white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 55%;
+    color: white;
+}
+
+.mars {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 60%;
+    color: white;
+}
+
+.jupiter{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.2em 0.2em 0 0;
+    border-radius: 70%;
+    color: white;
+}
+
+
+.saturn {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 60%;
+    color: white;
+}
+
+.uranus {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 60%;
+    color: white;
+}
+
+.neptune {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 60%;
+    color: white;
+}
+
+
+/*axis positioning*/
+
+.mercury {
+    top: 15em;
+    right: 14em;
+    width: 14em;
+    height: 12em;
+    animation: orbit 6s linear infinite;
+}
+
+.venus{
+    top: 16em;
+    right: 15em;
+    width: 15em;
+    height: 13em;
+    animation: orbit1 8s linear infinite;
+}
+
+
+.earth {
+    top: 3em;
+    left: 4em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.7s linear infinite;
+}
+
+.mars {
+    top: 5em;
+    left: 5em;
+    width: 32em;
+    height: 32em;
+    animation: orbit 7s linear infinite;
+}
+
+.jupiter {
+    top: 7em;
+    right: 4em;
+    width: 34em;
+    height: 34em;
+    animation: orbit 9s linear infinite;
+}
+
+.saturn {
+    top: 8em;
+    right: 8em;
+    width: 35em;
+    height: 36em;
+    animation: orbit 11s linear infinite;
+}
+
+
+
+.uranus {
+    top: 9.5em;
+    right: 10em;
+    width: 37em;
+    height: 37em;
+    animation: orbit 13s linear infinite;
+}
+
+.neptune {
+    top: 2em;
+    left: 2em;
+    width: 42em;
+    height: 42em;
+    animation: orbit 15s linear infinite;
+}
+
+
+
+/*Planet Structure*/
+
+.mercury::before,.venus::before,
+.earth::before,.saturn::before,.uranus::before,.neptune::before,
+.moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mars::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.jupiter::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+
+.mercury::before {
+    top: 1em;
+    right: 2em;
+    width: 1em;
+    height: 1em;
+    background-color: orange;
+    box-shadow:0 0 1em white  ;
+}
+
+.venus::before {
+    top: 1em;
+    right: 2em;
+    width: 1em;
+    height: 1em;
+    background-color:red;
+    box-shadow:0 0 1em white  ;
+}
+
+
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 2em;
+    height: 2em;
+    background-color: aquamarine;
+    box-shadow:0 0 1em burlywood ;
+}
+
+.mars::before {
+    top: 2.8em;
+    right: 5em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(199, 68, 68);
+    box-shadow:0 0 1em white  ;
+}
+
+.jupiter::before {
+    top: 2.8em;
+    right: 2.7em;
+    width: 4em;
+    height: 4em;
+    background-color: rgb(172, 109, 21);
+    box-shadow:0 0 3em red  ;
+}
+
+.saturn::before {
+    top: 2.8em;
+    right: 3.5em;
+    width: 2em;
+    height: 2em;
+    background-color:rgb(103, 103, 206);
+    box-shadow:0 0 1em white  ;
+}
+
+.uranus::before {
+    top: 2.8em;
+    right: 5em;
+    width: 1.5em;
+    height: 1.5em;
+    background-color:rgb(17, 122, 157);
+    box-shadow:0 0 1em white  ;
+}
+
+.neptune::before {
+    top: 2.8em;
+    right: 8em;
+    width: 1em;
+    height: 1em;
+    background-color:darkblue;
+    box-shadow:0 0 1em white  ;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 0.8em;
+    height: 0.9em;
+    background-color: silver;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit1 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.contain{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    background-image: url(Stars.jpeg);
+    align-items: center;
+}
+
+.card{
+    height: 500px;
+    width: 300px;
+    border: 4px  solid white;
+    background:transparent;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px ;
+    border-bottom: 10px black;
+    font-size: small;
+    font-style: italic;
+    background:transparent;
+    color: aliceblue;
+    box-shadow: 1px 1px 1px white;
+}
+.card h1{
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    text-shadow: 2px 2px 2px whitesmoke;
+}
+
+.card1 button{
+    display: flex;
+    height: 20px;
+    width: 190px;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 5px 5px 5px 5px;
+    background-color: blue;
+    box-shadow: 0.5px 0.5px 0.5px white;
+    color: antiquewhite;
+}
+
+
+.info-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+    padding: 50px 0;
+  }
+  
+  .info-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1280px;
+    width: 100%;
+    box-shadow: 20px 20px 20px grey;
+  }
+  
+  .info-link {
+    background:-webkit-linear-gradient(left,grey,white);
+    padding: 30px;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+  
+  
+  .info-link img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .info-link h3 {
+    margin-bottom: 10px;
+}
+
+.info-link a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: blue;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.info-link:hover a {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.hed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 9px 9px 9px blueviolet;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: -webkit-linear-gradient(left,green,blue,red);
+}
+
+.bed{
+    background-color: black;
+}
